@@ -1,0 +1,18 @@
+@font-face {
+    font-family: TTNorms;
+    src: url(../../assets/fonts/TTNorms-Regular.otf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: TTNorms;
+    src: url(../../assets/fonts/TTNorms-ExtraBold.otf);
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: TTNorms, sans-serif;
+}
