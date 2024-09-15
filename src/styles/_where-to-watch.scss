@@ -8,6 +8,10 @@
         text-align: center;
         margin-top: 30px;
         margin-bottom: 100px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 24px;
+        }
     }
 
     &__list {
@@ -15,12 +19,32 @@
         text-align: center;
         justify-content: center;
 
+        @media (max-width: 768px) {
+            display: block;
+        }
+
         &__item {
             margin: 0 20px;
 
             img {
                 max-width: 36px;
                 width: 100%;
+            }
+
+            @media (max-width: 1023px) {
+                img {
+                    max-width: 50px;
+                    width: 100%;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                margin: 30px 0;
+                
+                img {
+                    max-width: 60px;
+                    width: 100%;
+                }
             }
         }
     }

@@ -1,7 +1,24 @@
 .footer {
     padding: 36px 16px;
 
+    @media (max-width: 1023px) {
+        padding: 70px 24px;
+        margin: 50px 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 36px 16px;
+        margin: 0;
+    }
+
     &__container {
         text-align: center;
+        @media (max-width: 1023px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
     }
 }

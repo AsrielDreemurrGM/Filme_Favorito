@@ -10,11 +10,12 @@
     border-bottom: 1px solid black;
 
     &--is-hidden {
+        border-bottom: none;
         background-color: transparent;
         transition: background-color 1s ease;
 
         .header {
-            &__logo, &__links__item:first-child {
+            &__container__holder__logo, &__container__holder__name , &__links__item:first-child {
                 opacity: 0;
                 visibility: hidden;
                 transition: 1s ease;
@@ -27,10 +28,26 @@
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 768px) {
+            padding: 8px 0;
+        }
+
         &__holder {
             display: flex;
             align-items: center;
             font-weight: 700;
+
+            @media (max-width: 768px) {
+                display: block;
+    
+                h1 {
+                    margin-left: 25px;
+                }
+
+                p {
+                    margin-left: 5px;
+                }
+            }
 
             &__logo {
                 max-width: 80px;
@@ -50,6 +67,10 @@
         &__item {
             margin: 5px;
             transition: opacity 1s ease;
+
+            @media (max-width: 768px) {
+                margin: 2px;
+            }
         }
     }
 }
@@ -69,7 +90,7 @@
     text-decoration: none;
     cursor: pointer;
     font-weight: 700;
-
+    
     &:hover {
         background-color: lighten(variables.$buttonPrimaryColor, 5%);
         color: variables.$backgroundColor;
@@ -88,6 +109,10 @@
         background-color: rgba(variables.$buttonPrimaryColor, 0.8);
         border-color: variables.$buttonPrimaryColor;
         letter-spacing: 1px;
+
+        @media (max-width: 768px) {
+            margin-right: 3px;
+        }
 
         &:hover {
             background-color: variables.$textSecondary;
