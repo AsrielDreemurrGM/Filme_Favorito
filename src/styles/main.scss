@@ -2,6 +2,7 @@
 @use 'variables';
 @use 'hero';
 @use 'where-to-watch';
+@use 'faq';
 
 @font-face {
     font-family: TTNorms;
@@ -19,6 +20,10 @@
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     color: variables.$textPrimary;
+}
+
+.text {
+    @include text;
 }
 
 @mixin title($fontSize: 40px) {
@@ -48,4 +53,8 @@
     padding: 0;
     list-style: none;
     font-family: TTNorms, sans-serif;
+}
+
+body {
+    background-color: variables.$backgroundColor;
 }
