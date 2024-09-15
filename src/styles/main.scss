@@ -3,6 +3,7 @@
 @use 'hero';
 @use 'where-to-watch';
 @use 'faq';
+@use 'footer';
 
 @font-face {
     font-family: TTNorms;
@@ -22,8 +23,33 @@
     color: variables.$textPrimary;
 }
 
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: variables.$textSecondary;
+}
+
+.title {
+    @include title;
+
+    @media (max-width: 768px) {
+        @include title(24px);
+    }
+}
+
 .text {
     @include text;
+
+    @media (max-width: 768px) {
+        @include title(14px);
+    }
+}
+
+.text--big {
+    @include text(18px);
+
+    @media (max-width: 768px) {
+        @include text(15px);
+    }
 }
 
 @mixin title($fontSize: 40px) {

@@ -12,6 +12,10 @@
 
     &__questions {
         &__item {
+            border-radius: 20px;
+            margin-bottom: 20px;
+            background-color: lighten(variables.$backgroundColor, 5%);
+
             &__question {
                 cursor: pointer;
                 font-weight: 700;
