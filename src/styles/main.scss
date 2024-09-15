@@ -1,6 +1,7 @@
 @use 'header';
 @use 'variables';
 @use 'hero';
+@use 'where-to-watch';
 
 @font-face {
     font-family: TTNorms;
@@ -12,6 +13,33 @@
     font-family: TTNorms;
     src: url(../../assets/fonts/TTNorms-ExtraBold.otf);
     font-weight: 700;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variables.$textPrimary;
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: variables.$textSecondary;
+}
+
+.title--big {
+    @include title(44px);
+
+    @media (max-width: 768px) {
+        @include title(26px);
+    }
+}
+
+.title--small {
+    @include title(28px);
+
+    @media (max-width: 768px) {
+        @include title(22px);
+    }
 }
 
 * {

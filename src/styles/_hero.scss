@@ -2,13 +2,13 @@
 
 .hero {
     padding: 5.6vw;
-    min-height: 80vh;
+    min-height: 120vh;
     background-image: url(../images/o-gato-de-botas-2-hero.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
 
     &__content {
-        max-width: 640px;
+        max-width: 320px;
 
         &__branding {
             img {

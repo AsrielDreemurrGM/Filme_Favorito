@@ -1,0 +1,26 @@
+@use 'variables';
+
+.where-to-watch {
+    padding: 5.6vw;
+    background-color: variables.$backgroundColor;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__list {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+        &__item {
+            margin: 0 20px;
+
+            img {
+                max-width: 36px;
+                width: 100%;
+            }
+        }
+    }
+}
